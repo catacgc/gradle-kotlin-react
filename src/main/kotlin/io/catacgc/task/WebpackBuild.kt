@@ -14,7 +14,7 @@ open class WebpackBuild @Inject constructor(private val config: TaskProvider<Web
         inputs.files("build/kotlin-js-min")
         outputs.dir("build/bundle")
         workingDir = project.projectDir
-        dependsOn(config, "yarnInstall", "build")
+        dependsOn(config, "build")
     }
 
     override fun exec() {

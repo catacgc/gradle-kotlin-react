@@ -10,7 +10,7 @@ fun WEBPACK_PROD() = """
 
     var config = {
         mode: "production",
-        devtool: "cheap-module-eval-source-map",
+        devtool: "nosources-source-map",
         output: {
             "filename": "[name].bundle.js",
             "chunkFilename": "[id].bundle.js",

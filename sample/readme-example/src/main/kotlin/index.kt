@@ -1,19 +1,16 @@
 import kotlinx.html.js.onClickFunction
-import org.w3c.dom.Element
+import methods.sampleMethod
 import react.*
 import react.dom.*
 import kotlin.browser.document
 
 fun main() {
     document.onreadystatechange = {
-        document.getElementById("root")?.let { startReact(it) }
-    }
-}
-
-private fun startReact(elementById: Element) {
-    render(elementById) {
-        child(SimpleComponent::class) {
-            attrs.startFrom = 10
+        val element = document.getElementById("root")
+        render(element) {
+            child(SimpleComponent::class) {
+                attrs.startFrom = sampleMethod()
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 package methods
 
-fun sum(): Int {
+fun sampleMethod(): Int {
     return 1 + 1
 }

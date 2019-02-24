@@ -11,7 +11,7 @@ open class WebpackDevServer @Inject constructor(private val config: TaskProvider
         description = "start a webpack dev server; make sure you run ./gradle build before"
 
         workingDir = project.projectDir
-        dependsOn(config, "yarnInstall", "build")
+        dependsOn(config, "build")
     }
 
     override fun exec() {

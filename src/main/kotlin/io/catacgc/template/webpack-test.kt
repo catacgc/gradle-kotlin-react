@@ -5,16 +5,14 @@ import org.intellij.lang.annotations.Language
 @Language("js")
 fun WEBPACK_TEST() = """
 'use strict';
-
 const path = require('path');
-const WebpackShellPlugin = require('webpack-shell-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 var config = {
     mode: "development",
-    devtool: 'source-map',
+    devtool: 'eval',
     plugins: [
         new ErrorOverlayPlugin(),
         new HtmlWebpackPlugin()
@@ -24,11 +22,6 @@ var config = {
         overlay: true,
         compress: true,
         port: 9090
-    },
-    output: {
-        filename: 'test.js',
-        devtoolModuleFilenameTemplate: '[absolute-resource-path]',
-        devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
     },
     module: {
         "rules": [
@@ -43,6 +36,11 @@ var config = {
                 use: [
                     'null-loader'
                 ]
+            },
+            {
+                test: /\.js${'$'}/,
+                use: ['source-map-loader'],
+                enforce: 'pre'
             }
         ]
     },

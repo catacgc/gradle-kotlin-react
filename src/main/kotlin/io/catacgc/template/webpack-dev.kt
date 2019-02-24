@@ -13,7 +13,7 @@ fun WEBPACK_DEV() = """
     var config = {
         mode: "development",
         plugins: [new ErrorOverlayPlugin()],
-        devtool: 'cheap-module-source-map',
+        devtool: 'source-map',
         devServer: {
             // this is where index.html is loaded from
             contentBase: 'build/resources/main',
@@ -54,7 +54,6 @@ fun WEBPACK_DEV() = """
             "modules": [
                 "build/kotlin-js-min/main",
                 "build/resources/main",
-                "build/resources/test",
                 "node_modules"
             ]
         }

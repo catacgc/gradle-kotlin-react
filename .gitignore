@@ -12,4 +12,4 @@ node_modules
 
 yarn.lock
 
-packages.json
+package.json

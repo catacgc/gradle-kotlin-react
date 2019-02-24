@@ -1,5 +1,6 @@
 package io.catacgc.task
 
+import io.catacgc.template.KARMA_CONF
 import io.catacgc.template.WEBPACK_DEV
 import io.catacgc.template.WEBPACK_PROD
 import io.catacgc.template.WEBPACK_TEST
@@ -18,10 +19,14 @@ open class WebpackConfiguration : DefaultTask() {
     @OutputFile
     var testOutputFile = project.layout.buildDirectory.file("webpack-config/webpack.test.js")
 
+    @OutputFile
+    var karmaOutputFile = project.layout.buildDirectory.file("webpack-config/karma.conf.js")
+
     @TaskAction
     fun execute() {
         prodOutputFile.get().asFile.writeText(WEBPACK_PROD())
         devOutputFile.get().asFile.writeText(WEBPACK_DEV())
         testOutputFile.get().asFile.writeText(WEBPACK_TEST())
+        karmaOutputFile.get().asFile.writeText(KARMA_CONF())
     }
 }
