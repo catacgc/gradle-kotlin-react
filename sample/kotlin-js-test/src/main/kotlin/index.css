@@ -1,0 +1,6 @@
+@import "https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css";
+
+.error {
+    color: red;
+}
