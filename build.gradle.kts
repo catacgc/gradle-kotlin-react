@@ -24,7 +24,7 @@ gradlePlugin {
         create("reactPlugin") {
             id = "io.catacgc.kotlin-react"
             implementationClass = "io.catacgc.KotlinReactPluginEntry"
-            version = "0.1.0"
+            version = "0.2.0"
         }
     }
 }
@@ -39,7 +39,7 @@ pluginBundle {
             // id is captured from java-gradle-plugin configuration
             displayName = "Gradle Kotlin React Plugin"
             tags = listOf("kotlin", "react", "javascript", "webpack")
-            version = "0.1.0"
+            version = "0.2.0"
         }
     }
 }
