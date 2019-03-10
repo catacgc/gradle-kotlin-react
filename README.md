@@ -8,7 +8,7 @@ In your `build.gradle.kts`
 
 ```
 plugins {
-    id("io.catacgc.kotlin-react") version "<latest_version>"
+    id("io.catacgc.kotlin-react") version "0.3.0"
 }
 ```
 
