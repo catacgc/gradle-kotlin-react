@@ -1,5 +1,7 @@
 # Overview
 
+[![Build Status](https://travis-ci.com/catacgc/gradle-kotlin-react.svg?branch=master)](https://travis-ci.com/catacgc/gradle-kotlin-react)
+
 Plugin that make it easy to get started with kotlin.js and react with gradle
 
 # Set-up
